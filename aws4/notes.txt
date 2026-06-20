@@ -1,0 +1,18 @@
+[
+    [
+        "nat-02833b8912e435ce3",
+        "available"
+    ],
+    [
+        "nat-0c66a6da6ac090d41",
+        "deleted"
+    ]
+]
+[
+    "13.215.114.174",
+    "47.131.130.198",
+    "54.255.41.188"
+]
+[
+    "218485539818.dkr.ecr.ap-southeast-1.amazonaws.com/devops-bootcamp/firdazer"
+]
