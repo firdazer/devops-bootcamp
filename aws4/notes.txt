@@ -1,0 +1,5 @@
+[]
+[]
+[
+    "218485539818.dkr.ecr.ap-southeast-1.amazonaws.com/devops-bootcamp/firdazer"
+]
