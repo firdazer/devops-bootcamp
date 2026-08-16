@@ -8,13 +8,13 @@ terraform {
   }
 
 
-  backend "s3" {
-    bucket       = "bootcamp-2026-firdazer"
-    key          = "terraform3/terraform1.tfstate"
-    region       = "ap-southeast-1"
-    use_lockfile = true
+ backend "s3" {
+ bucket  = "bootcamp-2026-firdazer"
+ key     ="terraform3/terraform1.tfstate"
+  region     ="ap-southeast-1"
+ use_lockfile  = true
 
-  }
+ } 
 }
 
 provider "aws" {
