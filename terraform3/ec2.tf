@@ -16,6 +16,7 @@ data "aws_ssm_parameter" "token" {
   name = "/devops-bootcamp-2026/tunnel-token"
 }
 
+
 module "my_server_public" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 6.0"
