@@ -29,6 +29,7 @@ module "my_server_public" {
   vpc_security_group_ids = [module.my_sg.id]
   iam_instance_profile   = data.aws_iam_instance_profile.my_ssm_profile.name
 
-  user_data = templatefile("userdata.sh", {})
-  tags      = { Name = "tf-server-public" }
+  user_data = templatefile("userdata-tunnel.sh", {
+  tunnel_token = data.aws_ssm_parameter.token.value
+})
  } 
