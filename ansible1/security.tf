@@ -1,3 +1,7 @@
+data "http" "myip" {
+  url = "https://ifconfig.me/ip"
+}
+
 module "my_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "~> 6.0"
@@ -7,6 +11,15 @@ module "my_sg" {
   vpc_id          = module.my_vpc.vpc_id
 
   ingress_rules = {
+   
+    ssh = {
+    cidr_ipv4   = "${chomp(data.http.myip.response_body)}/32"
+    ip_protocol = "tcp"
+    from_port   = 22
+    to_port     = 22
+   
+    }
+   
     http = {
       cidr_ipv4   = "0.0.0.0/0"
       ip_protocol = "tcp"
