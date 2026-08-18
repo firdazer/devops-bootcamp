@@ -7,9 +7,7 @@ module "my_vpc" {
   azs  = ["ap-southeast-1a"]
 
   public_subnets  = ["10.20.1.0/24"]
-  private_subnets = ["10.20.2.0/24"]
-
+  
   map_public_ip_on_launch = true
-  enable_nat_gateway      = true
-  single_nat_gateway      = true
+
 }
