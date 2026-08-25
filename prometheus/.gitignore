@@ -1,0 +1,8 @@
+inventory.ini
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
